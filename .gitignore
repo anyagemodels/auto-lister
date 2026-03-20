@@ -1,23 +1,39 @@
 # Dependencies
 node_modules/
+package-lock.json
 npm-debug.log
+npm-error.log
 
-# Environment
+# Environment variables
 .env
 .env.local
+.env.*.local
 
 # Database
 data/
 *.db
-
-# Cache
-.cache/
-.DS_Store
+*.db-journal
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
 # Logs
 logs/
 *.log
+
+# Cache
+.cache/
+.npm/
+
+# Build output
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
