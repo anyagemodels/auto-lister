@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Lister - Multi-Marketplace E-Commerce Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .status {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .status strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🚀 Auto-Lister</h1>
+            <p class="tagline">AI-Powered Multi-Marketplace E-Commerce Platform</p>
+
+            <div class="status">
+                <strong>✅ Server Status: Online</strong>
+                <span id="status-message">Ready to use</span>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>📦 15+ Marketplaces</h3>
+                    <p>Sell on Amazon, eBay, Shopify, Etsy, and more simultaneously</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🎨 AI Image Generation</h3>
+                    <p>Create professional product images with a single click</p>
+                </div>
+
+                <div class="feature">
+                    <h3>💰 Dynamic Pricing</h3>
+                    <p>Real-time market analysis and automatic price optimization</p>
+                </div>
+
+                <div class="feature">
+                    <h3>📊 Advanced Analytics</h3>
+                    <p>Track sales, revenue, and performance across all channels</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🔄 Auto Inventory Sync</h3>
+                    <p>Keep inventory synchronized across all marketplaces in real-time</p>
+                </div>
+
+                <div class="feature">
+                    <h3>⚡ Full Automation</h3>
+                    <p>Automate listings, pricing, and customer support</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-primary" onclick="openDashboard()">📊 Go to Dashboard</button>
+                <button class="btn btn-secondary" onclick="openDocs()">📖 View Documentation</button>
+            </div>
+
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
+
+            <h3 style="margin-top: 30px; color: #333;">🎯 Quick Links</h3>
+            <div style="margin-top: 20px; text-align: left;">
+                <p><strong>API Base URL:</strong> <code style="background: #f0f0f0; padding: 5px 10px; border-radius: 4px;">http://localhost:3000/api</code></p>
+                <p style="margin-top: 10px;"><strong>Health Check:</strong> <code style="background: #f0f0f0; padding: 5px 10px; border-radius: 4px;">GET /api/health</code></p>
+            </div>
+
+            <div style="margin-top: 30px; color: #999; font-size: 0.9em;">
+                <p>Version 1.0.0 • Built with Node.js & SQLite</p>
+                <p><a href="https://github.com" style="color: #667eea; text-decoration: none;">GitHub</a> • 
+                   <a href="https://docs.auto-lister.com" style="color: #667eea; text-decoration: none;">Documentation</a> • 
+                   <a href="mailto:support@auto-lister.com" style="color: #667eea; text-decoration: none;">Support</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDashboard() {
+            window.location.href = '/dashboard.html';
+        }
+
+        function openDocs() {
+            alert('Documentation: https://github.com/yourusername/auto-lister#documentation');
+        }
+
+        // Check API health
+        fetch('/api/health')
+            .then(res => res.json())
+            .then(data => {
+                console.log('✅ API is healthy:', data);
+                document.getElementById('status-message').textContent = 'All systems operational • API v1.0';
+            })
+            .catch(err => {
+                console.error('❌ API error:', err);
+                document.getElementById('status-message').textContent = 'API connection error';
+            });
+    </script>
+</body>
+</html>
